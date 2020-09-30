@@ -44,19 +44,18 @@ This application shows an individual contact record, but we should imagine that 
 
 ## Task
 
-Your task today (if you choose to accept it) is to build a "weather card" to show what the weather is like where a contact lives. On the right hand side, we've started building it already. Currently, all it does is show a loading spinner.
+Your task today is to build a "weather card" to show what the weather is like where a contact lives. On the right hand side, we've started building it already. Currently, all it does is show a loading spinner.
 
 __We'd like you to finish it off.__ You will need to:
 
 1. Look up the weather at the contact's postcode using external APIs (more below)
 2. Store the data in Redux (in the `weather.js` reducer)
 3. Build a great-looking component (with an icon and message) that tells the user what the weather is like where this contact lives
-
-Additionally, we'd like to re-check the weather when the postcode changes.
+4. The weather should re-check when the postcode changes.
 
 ### Utility functions
 
-We've built a couple of utility functions that will be useful for you:
+We've built a few utility functions that will be useful for you:
 
 * `getPostcodeInfo(postcode)` - retrieves information about a valid UK postcode (includes coordinates)
 * `isValidPostcode(postcode)` - returns `true`/`false` to indicate whether a postcode is valid or not
@@ -66,14 +65,13 @@ Feel free to use these functions as they are, move them to a different location 
 
 ### Icons
 
-The `getWeatherAtCoordinates` utility function returns data in [this format](https://openweathermap.org/weather-conditions). An `icon` parameter is returned, which corresponds to a number of images in the `public/img/weather_icons` folder.
+The `getWeatherAtCoordinates` utility function (above) returns data in [this format](https://openweathermap.org/weather-conditions). An `icon` parameter is returned, which corresponds to a number of images in the `public/img/weather_icons` folder.
 
-We recommend that you use this parameter to render an icon in your components, like so:
+We recommend that you use this parameter to render an icon in your weather card, like so:
 
 ```
 <img src={`/img/weather_icons/01d.png`} />
 ```
-
 
 ### Folder structucture
 
@@ -87,17 +85,15 @@ Within this directory, there are a few sub directories:
 * `reducers` - a list of reducers. (You'll probably only need to use the `weather.js` reducer)
 * `views` - React components that render a view. The view you need to focus on is `views/Dashboard/Weather`
 
+### Material UI & styling
+
+We're using the fantastic React framework [Material UI](https://material-ui.com/) for rendering the UI.
+
+Material UI comes baked in with a [withStyles](https://material-ui.com/guides/typescript/#usage-of-withstyles) system to inject JSS into components. If you're familiar with JSS, feel free to use it. If you'd prefer to use another styling system (e.g. styled components) then feel free to install it.
 
 
+### Tips
 
-Tips:
-
-* Load the channels via [componentDidMount](https://reactjs.org/docs/react-component.html#componentdidmount)
-* You may want to use an `isLoading` state value to handle loading state
-* When the channels are loading a [progress spinner](https://material-ui.com/components/progress/) can be a nice touch
-
-## TODO
-
-* Consider recommending trying things out with Material UI first (e.g. paste in a `Button`)
-* Make Nodemon auto-restart the server when the `.env` file changes
-* Consider removing Beacon linting as it's too strict
+* Build a new component to render the weather card's content, pulling directly from Redux state
+* The current weather should be stored in Redux state
+* What should happen when the postcode isn't valid?
