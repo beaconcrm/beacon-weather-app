@@ -97,3 +97,9 @@ Material UI comes baked in with a [withStyles](https://material-ui.com/guides/ty
 * Build a new component to render the weather card's content, pulling directly from Redux state
 * The current weather should be stored in Redux state
 * What should happen when the postcode isn't valid?
+
+### What we're looking to see
+
+* Good usage of React and Redux
+* Solid code structure
+* A great looking component that's easy to understand
