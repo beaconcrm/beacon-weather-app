@@ -1,0 +1,2 @@
+
+export const PERSON_UPDATED = 'PERSON_UPDATED';
