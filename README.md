@@ -59,9 +59,9 @@ __We'd like you to finish it off.__ You will need to:
 
 We've built a few utility functions that will be useful for you:
 
-* `getPostcodeInfo(postcode)` - retrieves information about a valid UK postcode (includes coordinates)
+* `getPostcodeInfo(postcode)` - retrieves information about a valid UK postcode (includes coordinates) (using [Postcodes.io](http://postcodes.io/))
 * `isValidPostcode(postcode)` - returns `true`/`false` to indicate whether a postcode is valid or not
-* `getWeatherAtCoordinates(longitude, latitude)` - finds out what the weather is at a given set of coordinates
+* `getWeatherAtCoordinates(longitude, latitude)` - finds out what the weather is at a given set of coordinates (using [OpenWeatherMap](https://openweathermap.org/current))
 
 Feel free to use these functions as they are, move them to a different location in the folder structure, or edit them if you like.
 
