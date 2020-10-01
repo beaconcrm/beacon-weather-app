@@ -44,7 +44,9 @@ This application shows an individual contact record, but we should imagine that 
 
 ## Task
 
-Your task today is to build a "weather card" to show what the weather is like where a contact lives. On the right hand side, we've started building it already. Currently, all it does is show a loading spinner.
+Your task today is to build a "weather card" to show what the weather is like where a contact lives. This should include the "category" (e.g. rain), but ideally will also include other things (e.g. temperature).
+
+On the right hand side of the sample app, we've started building it already. Currently, all it does is show a loading spinner.
 
 __We'd like you to finish it off.__ You will need to:
 
@@ -97,9 +99,10 @@ Material UI comes baked in with a [withStyles](https://material-ui.com/guides/ty
 * Build a new component to render the weather card's content, pulling directly from Redux state
 * The current weather should be stored in Redux state
 * What should happen when the postcode isn't valid?
+* Feel free to take inspiration from your favourite weather app or website!
 
 ### What we're looking to see
 
 * Good usage of React and Redux
-* Solid code structure
+* Clean code and file structure
 * A great looking component that's easy to understand
