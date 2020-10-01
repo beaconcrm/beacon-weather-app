@@ -71,7 +71,6 @@
     "redux": "^4.0.4",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
-    "reselect": "^3.0.1",
     "uglifyjs-webpack-plugin": "^1.3.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.1",

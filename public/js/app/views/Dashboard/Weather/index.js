@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
 import { get } from 'lodash';
-import { createSelector } from 'reselect';
 
 import { updatePerson } from 'actions/weather'; // alias to the `app/actions` folder
 
@@ -8,23 +7,12 @@ import { updatePerson } from 'actions/weather'; // alias to the `app/actions` fo
 import Weather from './component';
 
 
-const getLocation = (state, props) => props.location;
-
-const selector = createSelector([
-
-  // access from the global redux state here
-  (state, props) => {
-    return state.weather.person;
-  },
-
-], (person) => {
-
-  // and pass the variables as props to add in here
+const mapStateToProps = (state, ownProps) => {
   return {
-    person,
+    person: state.weather.person,
   };
+};
 
-});
 
 
 // Pass action creators from the actions file as functions
@@ -35,7 +23,7 @@ const mapDispatchToProps = {
 
 
 const WeatherContainer = connect(
-  selector,
+  mapStateToProps,
   mapDispatchToProps,
 )(Weather);
 
